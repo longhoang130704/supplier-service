@@ -7,10 +7,10 @@ const SupplierRouter = express.Router();
 
 SupplierRouter.post('/register', supplierController.create);
 SupplierRouter.post('/login', supplierController.login);
-SupplierRouter.get('/', supplierController.getAll);
 
 SupplierRouter.use(authMiddleware);
 
+SupplierRouter.get('/', supplierController.getAll);
 SupplierRouter.get('/:id', supplierController.getById);
 SupplierRouter.put('/:id', supplierController.update);
 SupplierRouter.delete('/:id', supplierController.delete);
